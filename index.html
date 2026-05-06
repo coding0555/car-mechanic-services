@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVUP | Elite Auto Engineering & 3D Diagnostics</title>
+    <!-- Swiper 3D Carousel CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="logo">REV<span>UP</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#engines">Engines</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#parts">Inventory</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" title="Toggle Mode">☀️</button>
+            <button class="btn-signup">Sign Up</button>
+            <button class="btn-book">Book a Mechanic</button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+        <canvas id="three-canvas"></canvas>
+        <div class="hero-content" data-aos="zoom-out">
+            <h1>PRECISION <br><span class="outline">ENGINEERING</span></h1>
+            <p>India's premier 3D auto diagnostic and performance workshop.</p>
+            <div class="hero-btns">
+                <a href="#services" class="cta-main">Our Services</a>
+                <a href="#parts" class="cta-secondary">View Parts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img" data-aos="fade-right">
+                    <img src="performance-engine-parts.webp" alt="High Performance Engine">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h2 class="section-title">The REVUP Standard</h2>
+                    <p>We combine master craftsmanship with the latest 3D scanning technology to ensure your vehicle
+                        performs at its peak. From daily drivers to high-performance machines, we treat every car with
+                        surgical precision.</p>
+                    <div class="stats">
+                        <div class="stat-item"><strong>15+</strong><span>Years</span></div>
+                        <div class="stat-item"><strong>100%</strong><span>Precision</span></div>
+                        <div class="stat-item"><strong>24/7</strong><span>Support</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENGINE CAROUSEL SECTION -->
+    <section id="engines" class="engine-carousel-section section">
+        <h2 class="section-title center" data-aos="fade-up">Elite Powerplants</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://images.unsplash.com/photo-1620211608031-6ec683392471?auto=format&fit=crop&q=80&w=800"
+                        alt="V8 Engine">
+                    <div class="engine-info">
+                        <h3>V8 Twin Turbo</h3>
+                        <p>Optimized for raw torque and speed.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80&w=800"
+                        alt="Supercharged Engine">
+                    <div class="engine-info">
+                        <h3>Supercharged Inline-6</h3>
+                        <p>Precise response for track-ready handling.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://images.unsplash.com/photo-1616455579100-2ceaa4eb2d37?auto=format&fit=crop&q=80&w=800"
+                        alt="Custom Build">
+                    <div class="engine-info">
+                        <h3>Bespoke Racing V12</h3>
+                        <p>The pinnacle of REVUP custom engineering.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section services-section">
+        <h2 class="section-title center" data-aos="fade-up">Premium Services</h2>
+        <div class="services-grid">
+            <div class="service-card" data-aos="flip-left"
+                style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://img.freepik.com/premium-photo/auto-mechanic-checking-ecu-engine-system-with-obd2-wireless-scanning-tool-car-information-showing-screen-interface-car-maintenance-service-concept_41472-1986.jpg');">
+                <div class="card-content">
+                    <h3>Performance Tuning</h3>
+                    <p>ECU remapping for maximum torque and power.</p>
+                </div>
+            </div>
+            <div class="service-card" data-aos="flip-left" data-aos-delay="100"
+                style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://5.imimg.com/data5/JQ/GR/MY-1416695/laser-wheel-alignment-machine-with-computer.jpg');">
+                <div class="card-content">
+                    <h3>3D Laser Alignment</h3>
+                    <p>Digital alignment to ensure perfect handling.</p>
+                </div>
+            </div>
+            <div class="service-card" data-aos="flip-left" data-aos-delay="200"
+                style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTzE6eM1UHrubUIT1gidQcW4biZMNAJEmmr0J-GYRN8g6xjAit8Ddx8wfKwgcIu1SaW3x0-UDIdO9MdPiI');">
+                <div class="card-content">
+                    <h3>Custom Fabrication</h3>
+                    <p>Bespoke exhaust and aerodynamic modifications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTS SECTION -->
+    <section id="parts" class="section parts-section">
+        <h2 class="section-title center" data-aos="fade-up">Elite Parts Inventory</h2>
+        <div class="parts-grid">
+            <div class="part-item" data-aos="fade-up">
+                <div class="part-img-container">
+                    <img src="https://image.made-in-china.com/2f0j00cCaWhHKJEFzu/Carbon-Ceramic-Brake-Disc-Brake-Rotor-Brake-Disc-330mm-380mm-410mm-for-Racing-Car-Sports-Car.webp"
+                        alt="Carbon Ceramic Rotor">
+                </div>
+                <h4>Carbon Ceramics</h4>
+                <span class="price">From ₹4,21,400</span>
+            </div>
+            <div class="part-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="part-img-container">
+                    <img src="https://media.istockphoto.com/id/468341756/photo/disassembled-parts-of-sports-vehicle-motor.jpg?s=612x612&w=0&k=20&c=Il8hVW6vpQMiE2tLKwRncibv865RCg3La0j7oelFtLA="
+                        alt="Turbocharger">
+                </div>
+                <h4>High-Flow Turbos</h4>
+                <span class="price">From ₹16,800</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">REV<span>UP</span></div>
+                <p>Driving the future of automotive care in India.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Workshop: Mumbai | Delhi | Bangalore</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 REVUP Mechanics. Built for Performance.</p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
